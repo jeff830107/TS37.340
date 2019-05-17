@@ -7,4 +7,12 @@
 2.  Keyword : MR-DC filter
   (i) 收到MR-DC相關的capabilities的時候, MN應該要提供MR-DC/E-UTRA/NR capability container裡會影響MR-DC相關capabilities的MR-DC filter
   (ii)  使用不同UE capability enquiry message來獲取不同containers的時候, MN在所有的enquiry messages裡都應該要使用相同的MR-DC filter
-  (iii) 在E-UTRA RRC UE的capability enquiry時, MR-DC filter也被用來獲得NR capabilites; 換句話說, 事實上存在一個MR-DC/NR filter(同時有一個單獨的filter是for R-UTRA capabilities)  
+  (iii) 在E-UTRA RRC UE的capability enquiry時, MR-DC filter也被用來獲得NR capabilites; 換句話說, 事實上存在一個MR-DC/NR filter
+        (同時會有一個單獨的filter是for R-UTRA capabilities)
+  (iv)  MN會store在core network裡所獲得的capabilities和用來獲得這些capabilities的filter來做之後的用途
+3.  Keypoint : MN跟SN之間對UE capability的negotiation
+  (i) UE的capabilities需要在E-UTRA和NR之間做協調
+      (換句話說就是band combinations, baseband processing capabilities和UE在SCG裡對FR1能使用的最大power)
+      而這要由MN來決定如何來解決MN跟SN configuration的dependency
+  (ii)  MN接著提供可用於SCG configuration的UE capabilities給SN  
+  (iii) 在SN發起的SN modification過程裡, SN會indicate想要的UE capabilities可用於SCG configuration, 而MN最後會決定要accept或是reject the request
