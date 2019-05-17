@@ -4,5 +4,8 @@
   (ii)  如果MN用NR PDCP來terminates一個bearer, NR PDCP的configuration會由MN來產生
   (iii) 如果SN terminates一個bearer, NR PDCP的configuration會由SN來產生, 並且會將這個configuration(?)傳給MN當作一個單獨的container
 2.
-  (i) 
-  (ii)  
+  (i) UE對一個封裝的MN RRC message用共同的success/failure procedure
+  (ii)  對failure的MN RRC message(包括封裝的SN RRC message with有/沒有任何一個MCG reconfiguration field)會trigger re-establishment的procedure
+  (iii) 每一個SN RRC reconfiguration的message都應該要有自己的RRC response message, 即使當SN RRC message是被封裝在MN RRC message裡的
+  (iv)  SN RRC response message會透過X2/Xn forward給SN
+  (v) 如果SN RRC reconfiguration的message是包在MN RRC message裡的, UE要傳封裝有SN RRC message裡的MN RRC response message
