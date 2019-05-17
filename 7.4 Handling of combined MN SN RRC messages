@@ -1,0 +1,8 @@
+1.
+  (i) 當MCG和SCG configuration都是因為要跟MN做coordination而需要的時候, SN RRC reconfiguration message要被封裝在MN RRC message裡,
+      而這個message也會帶相應的MCG reconfiguration來確認combined過後的configuration可以被UE共同處理
+  (ii)  如果MN用NR PDCP來terminates一個bearer, NR PDCP的configuration會由MN來產生
+  (iii) 如果SN terminates一個bearer, NR PDCP的configuration會由SN來產生, 並且會將這個configuration(?)傳給MN當作一個單獨的container
+2.
+  (i) 
+  (ii)  
