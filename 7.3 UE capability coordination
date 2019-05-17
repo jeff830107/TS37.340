@@ -1,0 +1,10 @@
+1.  Keyword : capability container
+  (i) UE的capabilities for MR-DC是由不同的capabilitiy containers所組成
+  (ii)  -> MR-DC container : MR-DC band combinations
+        -> E-UTRA and NR capability containers : feature sets
+  (iii) -> MR-DC container裡所帶的MR-DC capabilities需要是visible的for both MN和SN
+        -> E-UTRA and NR containers只需要visible的for該RAT的node
+2.  Keyword : MR-DC filter
+  (i) 收到MR-DC相關的capabilities的時候, MN應該要提供MR-DC/E-UTRA/NR capability container裡會影響MR-DC相關capabilities的MR-DC filter
+  (ii)  使用不同UE capability enquiry message來獲取不同containers的時候, MN在所有的enquiry messages裡都應該要使用相同的MR-DC filter
+  (iii) 在E-UTRA RRC UE的capability enquiry時, MR-DC filter也被用來獲得NR capabilites; 換句話說, 事實上存在一個MR-DC/NR filter(同時有一個單獨的filter是for R-UTRA capabilities)  
