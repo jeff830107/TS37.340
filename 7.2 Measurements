@@ -1,4 +1,3 @@
-7.2 Measurements
 1. 如果要加SN的話, MN要去config UE去做measurement
 2. 如果要做intra-SN間的mobility的話, SN要跟MN一起去config UE做measurement
 3. 
