@@ -17,6 +17,7 @@
 		-> SN config的measurement report要透過SRB1傳
 		
 ========== Q1: SRB3是在甚麼時候會被configured ? ==========
+[補充] : SRB3是由SN決定要不要建的
 
 6. 在inter-MN的HO時, MN那邊有一些target SN的measurement data
 	-> 可以把這些data傳給target SN
